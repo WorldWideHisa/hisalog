@@ -1,0 +1,2 @@
+# wordwidehisa.github.io
+ブログ
