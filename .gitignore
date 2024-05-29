@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+
+# Nuxt3
+.nuxt/
+dist/
+
+# VSCode
+.vscode*/
+
+# Docker
+.bash_history
+.node_repl_history
