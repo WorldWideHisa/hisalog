@@ -1,4 +1,4 @@
-FROM node:22.2.0-bookworm-slim
+FROM node:20.14.0-bookworm-slim
 
 WORKDIR /app
 ENV HOME=/app
