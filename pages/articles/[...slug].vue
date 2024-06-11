@@ -1,19 +1,12 @@
 <template>
-  <main>
-    <ContentDoc />
-  </main>
+  <div>
+    <h1>Slug: {{ slug }}</h1>
+  </div>
 </template>
 
 <script setup>
-import { useContent } from '@nuxt/content'
+import { useRoute } from 'vue-router'
 
-// 現在のルートパラメータを取得
 const route = useRoute()
-const { slug } = route.params
-
-// コンテンツを取得
-const { data: article } = await useContent().findOne(slug)
-
-// 記事データを出力してデバッグ
-console.log(article)
+const slug = route.params.slug
 </script>
