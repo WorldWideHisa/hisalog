@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    preset: 'github-pages'
+  },
   devtools: { enabled: true },
   modules: ["@nuxt/content"],
   content: {
