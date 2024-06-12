@@ -10,14 +10,16 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { queryContent } from '@nuxt/content'
+import { useAsyncData } from '#app'
 
 const article = ref(null)
 const route = useRoute()
 
-onMounted(async () => {
+const { data, error } = useAsyncData(async () => {
   const { slug } = route.params
   const path = `/articles/${slug.join('/')}`
-  article.value = await queryContent(path).fetchOne()
+  return await $content(path).fetch()
 })
+
+article.value = data.value
 </script>
