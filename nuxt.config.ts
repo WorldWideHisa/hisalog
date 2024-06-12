@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/content"],
   content: {
+    documentDriven: true,
     sources: {
       github: {
         prefix: '/articles', // Prefix for routes used to query contents
