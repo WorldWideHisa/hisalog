@@ -1,3 +1,5 @@
+import { resolve } from "path";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
@@ -6,16 +8,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/content"],
   content: {
-    documentDriven: true,
     sources: {
-      github: {
-        prefix: '/articles', // Prefix for routes used to query contents
-        driver: 'github', // Driver used to fetch contents (view unstorage documentation)
-        repo: "WorldWideHisa/wwh-blog-content",
-        branch: "main",
-        dir: "content/articles", // Directory where contents are located. It could be a subdirectory of the repository.
-        // Imagine you have a blog inside your content folder. You can set this option to `content/blog` with the prefix option to `/blog` to avoid conflicts with local files.
-      },
+      content: {
+        driver: 'fs',
+        prefix: '/articles', // All contents inside this source will be prefixed with `/docs`
+        base: resolve(__dirname, 'content', 'articles')
+      }
     }
   }
 })
