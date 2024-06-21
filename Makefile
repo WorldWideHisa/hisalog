@@ -13,7 +13,7 @@ down:
 
 build:
 	docker compose -f ./docker/compose.yaml build --no-cache
-	
+
 logs:
 	docker compose -f ./docker/compose.yaml logs -f
 
