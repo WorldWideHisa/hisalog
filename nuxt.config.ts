@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     preset: 'github-pages'
   },
   devtools: { enabled: true },
+  app: {
+    baseURL: '/worldwidehisa.github.io/',
+  },
   modules: ["@nuxt/content"],
   content: {
     sources: {
