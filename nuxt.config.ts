@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   app: {
-    baseURL: '/worldwidehisa.github.io/',
+    baseURL: '/hisalog/',
   },
   modules: ["@nuxt/content"],
   content: {
