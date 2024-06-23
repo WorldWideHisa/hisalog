@@ -3,7 +3,14 @@ import { resolve } from "path";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
-    preset: 'github-pages'
+    preset: 'github-pages',
+    prerender: {
+      routes: [
+        '/', // TOPページ
+        '/articles/20240617_test',
+        // ... 追加の記事
+      ]
+    }
   },
   devtools: { enabled: true },
   app: {
