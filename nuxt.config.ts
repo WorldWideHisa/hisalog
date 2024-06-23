@@ -7,10 +7,10 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/', // TOPページ
-        '/articles/20240617_test',
-        // ... 追加の記事
+        '/articles/20240617',
       ]
-    }
+    },
+    logLevel: 'debug'
   },
   devtools: { enabled: true },
   app: {
@@ -25,5 +25,5 @@ export default defineNuxtConfig({
         base: resolve(__dirname, 'content', 'articles')
       }
     }
-  }
+  },
 })
