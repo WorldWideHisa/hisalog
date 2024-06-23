@@ -6,6 +6,7 @@
 </template>
 
 <script setup>
+Vue.config.devtools = true;
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
