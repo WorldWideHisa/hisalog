@@ -1,5 +1,14 @@
 <template>
   <div>
-    <ContentDoc />
+    <p>Loading document at: /{{ slug.join('/') }}</p>
+    <ContentDoc :path="`/${slug.join('/')}`" />
   </div>
 </template>
+
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const slug = route.params.slug || [];
+console.log('Fetching document at:', `/${slug.join('/')}`);
+</script>
