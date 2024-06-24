@@ -13,9 +13,9 @@ export default defineNuxtConfig({
     logLevel: 'debug'
   },
   devtools: { enabled: true },
-  app: {
-    baseURL: '/hisalog/',
-  },
+  // app: {
+  //   baseURL: '/hisalog/',
+  // },
   modules: ["@nuxt/content"],
   content: {
     sources: {
