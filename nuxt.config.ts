@@ -16,13 +16,13 @@ export default defineNuxtConfig({
   //   baseURL: '/worldwidehisa.github.io/',
   // },
   modules: ["@nuxt/content"],
-  content: {
-    sources: {
-      content: {
-        driver: 'fs',
-        prefix: '/articles', // All contents inside this source will be prefixed with `/docs`
-        base: resolve(__dirname, 'content', 'articles')
-      }
-    }
-  },
+  // content: {
+  //   sources: {
+  //     content: {
+  //       driver: 'fs',
+  //       prefix: '/articles', // All contents inside this source will be prefixed with `/docs`
+  //       base: resolve(__dirname, 'content', 'articles')
+  //     }
+  //   }
+  // },
 })
