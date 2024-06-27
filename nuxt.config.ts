@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   app: {
-    baseURL: '/',
+    baseURL: '/worldwidehisa.github.io/',
   },
   modules: ["@nuxt/content"],
   content: {
