@@ -6,16 +6,15 @@ export default defineNuxtConfig({
     // preset: 'github-pages',
     prerender: {
       routes: [
-        '/', // TOPページ
         '/articles/1',
       ]
     },
     logLevel: 'debug'
   },
   devtools: { enabled: true },
-  app: {
-    baseURL: '/worldwidehisa.github.io/',
-  },
+  // app: {
+  //   baseURL: '/worldwidehisa.github.io/',
+  // },
   modules: ["@nuxt/content"],
   content: {
     sources: {
