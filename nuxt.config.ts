@@ -7,15 +7,15 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/', // TOPページ
-        '/articles/20240617',
+        '/articles/1',
       ]
     },
     logLevel: 'debug'
   },
   devtools: { enabled: true },
-  // app: {
-  //   baseURL: '/hisalog/',
-  // },
+  app: {
+    baseURL: '/',
+  },
   modules: ["@nuxt/content"],
   content: {
     sources: {
