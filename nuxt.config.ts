@@ -12,9 +12,10 @@ export default defineNuxtConfig({
     logLevel: 'debug'
   },
   devtools: { enabled: true },
-  // app: {
-  //   baseURL: '/worldwidehisa.github.io/',
-  // },
+  app: {
+    baseURL: '/hisalog/',
+    cdnURL: 'https://worldwidehisa.github.io/hisalog/'
+  },
   modules: ["@nuxt/content"],
   // content: {
   //   sources: {
