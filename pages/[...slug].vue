@@ -1,7 +1,8 @@
 <template>
   <div>
     <p>Loading document at(先頭/なし): {{ slug.join('/') }}</p>
-    <ContentDoc :path="`/${slug.join('/')}`" />
+    <ContentDoc :path="`/articles/1`" />
+    <!-- <ContentDoc :path="`/${slug.join('/')}`" /> -->
   </div>
 </template>
 
