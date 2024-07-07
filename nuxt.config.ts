@@ -1,13 +1,22 @@
+import { globSync } from 'glob';
 import { resolve } from "path";
+
+const getContentRoutes = (): string[] => {
+  const contentPath = resolve('content/**/*.md');
+  const routeNames = globSync(contentPath).map((f) => {
+    // パスを整形して返す
+    const pattern = /^\/[^\/]+\/[^\/]+\/hisalog\/content/;
+    return f.replace(pattern, '').replace('.md', '');
+  });
+
+  return [...routeNames]
+}
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
-    // preset: 'github-pages',
     prerender: {
-      routes: [
-        '/articles/1',
-      ]
+      routes:  getContentRoutes()
     },
     logLevel: 'debug'
   },
@@ -21,7 +30,7 @@ export default defineNuxtConfig({
     sources: {
       content: {
         driver: 'fs',
-        prefix: '/articles', // All contents inside this source will be prefixed with `/docs`
+        prefix: '/articles',
         base: resolve(__dirname, 'content', 'articles')
       }
     }
