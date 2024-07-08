@@ -5,7 +5,7 @@ const getContentRoutes = (): string[] => {
   const contentPath = resolve('content/**/*.md');
   const routeNames = globSync(contentPath).map((f) => {
     // パスを整形して返す
-    const pattern = /^\/[^\/]+\/[^\/]+\/hisalog\/content/;
+    const pattern = /.*\/hisalog\/content/;
     return f.replace(pattern, '').replace('.md', '');
   });
 
