@@ -1,5 +1,5 @@
-import { globSync } from "glob";
 import { resolve } from "path";
+import { globSync } from "glob";
 
 const getContentRoutes = (): string[] => {
   const contentPath = resolve("content/**/*.md");
@@ -26,6 +26,11 @@ export default defineNuxtConfig({
     cdnURL: "https://worldwidehisa.github.io/hisalog/",
   },
   modules: ["@nuxt/content"],
+  typescript: {
+    shim: false, // VScodeの拡張機能を使うためにfalse
+    strict: true, // 型チェックの厳格化
+    typeCheck: true, // 開発、build時の型チェックを有効に。vue-tscとtypescriptのインストールが必要
+  },
   content: {
     sources: {
       content: {
