@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": [".nuxt", "node_modules", "dist"]
+    "ignore": [".nuxt", "node_modules", "dist", ".output"]
   },
   "formatter": {
     "enabled": true,
